@@ -25,8 +25,7 @@ function loginFB(){
       b.removeAttribute("style"); b.innerHTML = accessToken;
       document.getElementById('authIDin').value = accessToken;
     } else {
-      FB.login();
-      a.innerHTML = "Please press authenticate one more time to verify";
+      a.innerHTML = "Please press the Log in With Facebook to continue";
     }
   });
 }
@@ -42,6 +41,8 @@ getFriendsList = function() {
     var ft = document.getElementById("friendTxt");
     console.log(a);
     ft.removeAttribute("style");
-    ft.innerHTML = "Total number of friends : " + a.summary.total_count + "<br>A random friend : " + a.data;
+    var fS = a.data.length;
+    fS = Math.floor(Math.random() * fS);
+    ft.innerHTML = "Total number of friends : " + a.summary.total_count + "<br>A random friend : " + a.data[fS].name;
   });
 };
