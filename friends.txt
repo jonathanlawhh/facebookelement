@@ -9,3 +9,5 @@ Elon Musk,Male,46
 Scarlett Johansson,Female,33
 Chris Evans,Male,36
 Robert Downey Jr.,Male,52
+Orlando YML,Female,20
+Chloe Grace Moretz,Female,21

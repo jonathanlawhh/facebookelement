@@ -4,8 +4,8 @@
 	<meta name="theme-color" content="#0d47a1">
   <link rel="stylesheet" href="css/materialize.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <script type="text/javascript" src="js/fbAuth.js" async></script>
   <script type="text/javascript" src="js/materialize.min.js" async></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
 	  body { display: flex; min-height: 100vh; flex-direction: column; }
@@ -14,8 +14,10 @@
 		::-moz-selection { background: #d81b60; color:#ffffff; }
   </style>
 </head>
+<?php include("js/fbAuth.php"); ?>
+<div id="outerBody">
 <body>
-  <main>
+  <main class="mainclass">
     <nav class="blue darken-3">
       <div class="nav-wrapper container">
         <a href="auth.php" class="brand-logo center">FB Auth Page</a>
@@ -54,6 +56,7 @@
           </div>
         </div>
       </div>
+		</div>
 
       <div class="row" style="margin-top:10px;">
         <div class="col s12">
@@ -64,7 +67,7 @@
               <p>This will display a 3D visualization of user friends.</p><br>
               <p id="friendTxt" style="display:none"></p><br>
               <a class="waves-effect waves-light btn" style="margin-top:10px;" href="dummy.php" target="_blank">Dummy data</a>
-              <a class="waves-effect waves-light btn disabled" style="margin-top:10px;" onclick="loadFBdata();">Facebook data</a>
+              <a class="waves-effect waves-light btn" style="margin-top:10px;" id="loadFBbtn" onclick="loadFBdata();" disabled>Facebook data</a>
             </div>
           </div>
         </div>
@@ -93,6 +96,8 @@
     </div>
   </footer>
 </body>
+</div>
+</html>
 <script>
 function deleteAuth() {
   var a = "https://graph.facebook.com/me/permissions?method=delete&access_token=" + document.getElementById("authIDin").value;
@@ -103,4 +108,3 @@ function initialize() {
 }
 window.addEventListener ? window.addEventListener("load", initialize, !1) : window.attachEvent ? window.attachEvent("onload", initialize) : window.onload = initialize;
 </script>
-</html>
