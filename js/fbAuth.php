@@ -35,13 +35,15 @@ $p = fopen("position.txt", "r");
 while(!feof($p)) { array_push($posi,fgets($p)); }
 fclose($p);
 $i = 0; ?>
+var val =[<?php foreach($posi as $a){echo trim($a) . ',';}; ?>];
+var p1 = 0; var p2 = 1;
 getFriendsList = function() {
   FB.api('/me/friends?fields=name,gender', function(a) {
     var ft = document.getElementById("friendTxt");
     console.log(a);
     ft.removeAttribute("style");
     var fS = a.data.length;
-    for (i = 0; i < fS; i++) { table.push(i,a.data[i].name,a.data[i].gender,<?php echo $posi[$i]; $i++; ?>,); }
+    for (i = 0; i < fS; i++) { table.push(i,a.data[i].name,a.data[i].gender,val[p1],val[p2],); p1+=2; p2+=2;}
     fS = Math.floor(Math.random() * fS);
     ft.innerHTML = "Total number of friends : " + a.summary.total_count + "<br>A random friend : " + a.data[fS].name;
     return fS;
