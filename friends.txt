@@ -1,0 +1,11 @@
+Lian Wen Xun,Female,21
+Chow Khai Bin,Male,20
+Harryo,Male,21
+Lai Llih Shyan,Female,20
+Lai Yong Cheng,Female,20
+Chris Chan,Male,22
+Mark Zuckerberg,Male,33
+Elon Musk,Male,46
+Scarlett Johansson,Female,33
+Chris Evans,Male,36
+Robert Downey Jr.,Male,52
