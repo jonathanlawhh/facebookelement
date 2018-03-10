@@ -15,23 +15,20 @@ window.fbAsyncInit = function() {
    fjs.parentNode.insertBefore(js, fjs);
  }(document, 'script', 'facebook-jssdk'));
 function loginFB(){
-var a = document.getElementById("authStatus");
-var b = document.getElementById("authID");
-a.innerHTML = "Authentication status : Pending...";
-FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    var accessToken = response.authResponse.accessToken;
-    getMyInfo();
-    getFriendsList();
-    console.log('Logged in.');
-    b.removeAttribute("style"); b.innerHTML = accessToken;
-    document.getElementById('authIDin').value = accessToken;
-  }
-  else {
-    FB.login();
-    a.innerHTML = "Please press authenticate one more time to verify";
-  }
-}, {scope:'user_friends',return_scopes: true});
+  var a = document.getElementById("authStatus"); var b = document.getElementById("authID");
+  a.innerHTML = "Authentication status : Pending...";
+  FB.getLoginStatus(function(response) {
+    if (response.status === 'connected') {
+      var accessToken = response.authResponse.accessToken;
+      getMyInfo();
+      getFriendsList();
+      b.removeAttribute("style"); b.innerHTML = accessToken;
+      document.getElementById('authIDin').value = accessToken;
+    } else {
+      FB.login();
+      a.innerHTML = "Please press authenticate one more time to verify";
+    }
+  });
 }
 
 getMyInfo = function() {
@@ -41,10 +38,10 @@ getMyInfo = function() {
 };
 
 getFriendsList = function() {
-  FB.api('/me/friends/', function(a) {
+  FB.api('/me/friends', function(a) {
     var ft = document.getElementById("friendTxt");
     console.log(a);
     ft.removeAttribute("style");
-    ft.innerHTML = "One of my friend : " + a.name;
+    ft.innerHTML = "Total number of friends : " + a.summary.total_count + "<br>A random friend : " + a.data;
   });
 };

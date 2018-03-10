@@ -45,10 +45,12 @@
             <div class="card-content">
               <span class="card-title">Let's go!</span>
               <div class="divider"></div><br>
-              <p id="authStatus">Authentication status : Not started</p><br>
+              <p id="authStatus">Authentication status : Not started<br>
+							First click login with Facebook, then click authenticate<br>
+							If you have login before, straight away click authenticate</p><br>
               <p id="authID" class="truncate" style="display:none"></p><br>
-              <a class="waves-effect waves-light btn blue darken-3" onclick="loginFB();"><i class="material-icons left">cloud</i>Authenticate</a>
-            </div>
+							<div style="margin-bottom:20px;" class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="false" data-use-continue-as="false" data-scope="user_friends"></div><br>
+							<a class="waves-effect waves-light btn blue darken-3" onclick="loginFB();"><i class="material-icons left">cloud</i>Authenticate</a>
           </div>
         </div>
       </div>
