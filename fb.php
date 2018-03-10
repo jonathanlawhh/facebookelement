@@ -41,7 +41,7 @@
 
 					var element = document.createElement( 'div' );
 					element.className = 'element';
-					if(table[gender]=='Male'){ element.style.backgroundColor = 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')'; }
+					if(table[gender]=='male'){ element.style.backgroundColor = 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')'; }
 					else { element.style.backgroundColor = 'rgba(255,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')'; }
 					gender +=5;
 
