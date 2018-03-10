@@ -41,7 +41,7 @@ getFriendsList = function() {
     console.log(a);
     ft.removeAttribute("style");
     var fS = a.data.length;
-    for (i = 0; i < fS; i++) { table.push(i,a.data[i].name,a.data[i].gender,<?php echo $posi[$i]; $i++?>,); }
+    for (i = 0; i < fS; i++) { table.push(i,a.data[i].name,a.data[i].gender,<?php echo $posi[$i]; $i++; ?>,); }
     fS = Math.floor(Math.random() * fS);
     ft.innerHTML = "Total number of friends : " + a.summary.total_count + "<br>A random friend : " + a.data[fS].name;
     return fS;
