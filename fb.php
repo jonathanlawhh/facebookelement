@@ -41,9 +41,6 @@
 
 					var element = document.createElement( 'div' );
 					element.className = 'element';
-					if(table[gender]=='male'){ element.style.backgroundColor = 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')'; }
-					else { element.style.backgroundColor = 'rgba(255,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')'; }
-					gender +=5;
 
 					var number = document.createElement( 'div' );
 					number.className = 'number';
@@ -71,6 +68,10 @@
 					var object = new THREE.Object3D();
 					object.position.x = ( table[ i + 3 ] * 140 ) - 1330;
 					object.position.y = - ( table[ i + 4 ] * 180 ) + 990;
+
+					"Male" == table[gender] ? (element.style.backgroundColor = "rgba(0,127,127," + (0.5 * Math.random() + 0.25) + ")", element.style.boxShadow = "0px 0px 12px rgba(0,255,255,0.5)", symbol.style.textShadow = "0 0 10px rgba(0,255,255,0.95)")
+					: (element.style.backgroundColor = "rgba(229,94,162," + (0.5 * Math.random() + 0.25) + ")", element.style.boxShadow = "0px 0px 12px rgba(229,94,162,0.5)", symbol.style.textShadow = "0px 0px 12px rgba(229,94,162,0.8)");
+					gender +=5;
 
 					targets.table.push( object );
 

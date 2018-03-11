@@ -51,7 +51,8 @@
 							First click login with Facebook, then click authenticate<br>
 							If you have login before, straight away click authenticate</p><br>
               <p id="authID" class="truncate" style="display:none"></p><br>
-							<div style="margin-bottom:20px;" class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="true" data-auto-logout-link="false" data-use-continue-as="false" data-scope="user_friends"></div><br>
+							<div style="margin-bottom:20px;" class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="true"
+									 data-auto-logout-link="false" data-use-continue-as="false" data-scope="user_friends" onlogin="loginFB();"></div><br>
 							<a class="waves-effect waves-light btn blue darken-3" onclick="loginFB();"><i class="material-icons left">cloud</i>Authenticate</a>
           </div>
         </div>
