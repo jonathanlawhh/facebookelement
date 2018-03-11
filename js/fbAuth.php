@@ -37,14 +37,15 @@ fclose($p); ?>
 var val =[<?php foreach($posi as $a){echo trim($a) . ',';}; ?>];
 var p1 = 0; var p2 = 1;
 getFriendsList = function() {
-  FB.api('/me/friends?fields=name,gender', function(a) {
+  FB.api('/me/friends?fields=first_name,gender', function(a) {
     var ft = document.getElementById("friendTxt");
     ft.removeAttribute("style");
     console.log(a);
     var fS = a.data.length;
-    for (i = 0; i < fS; i++) { table.push(i,a.data[i].name,a.data[i].gender,val[p1],val[p2],); p1+=2; p2+=2;}
+    var posiL = val.length/2;
+    for (i = 0; i < fS; i++) { if(posiL<i){ break; } table.push(i,a.data[i].first_name,a.data[i].gender,val[p1],val[p2],); p1+=2; p2+=2;}
     rS = Math.floor(Math.random() * fS);
-    ft.innerHTML = "Total number of friends : " + a.summary.total_count + "<br>Number of friends using this app : " + fS + "<br>A random friend using this app : " + a.data[rS].name;
+    ft.innerHTML = "Total number of friends : " + a.summary.total_count + "<br>Number of friends using this app : " + fS + "<br>A random friend using this app : " + a.data[rS].first_name;
     return fS;
   });
 };

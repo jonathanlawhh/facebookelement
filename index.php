@@ -37,7 +37,8 @@
         </li>
         <li>
           <div class="collapsible-header"><i class="material-icons">remove_red_eye</i>Privacy and data collection</div>
-          <div class="collapsible-body"><span>All information including your email, username or passwords are not stored on this site. Also, no data collection activity will take place. Only your profile and friends will be retrieved.</span></div>
+          <div class="collapsible-body"><span>All information including your email, username or passwords are not stored on this site. Also, no data collection activity will take place.
+						Only your profile and friends first name,gender will be retrieved and destroyed after the session ends.</span></div>
         </li>
       </ul>
 
