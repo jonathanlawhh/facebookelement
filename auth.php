@@ -1,1 +1,1 @@
-<script>window.open("index.php");</script>
+<script>window.location.replace("https://friendelement.azurewebsites.net/");</script>

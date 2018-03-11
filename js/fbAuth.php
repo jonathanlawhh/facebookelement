@@ -44,7 +44,7 @@ getFriendsList = function() {
     var fS = a.data.length;
     for (i = 0; i < fS; i++) { table.push(i,a.data[i].name,a.data[i].gender,val[p1],val[p2],); p1+=2; p2+=2;}
     rS = Math.floor(Math.random() * fS);
-    ft.innerHTML = "Total number of friends : " + a.summary.total_count + "<br>Number of friends using this app : " + fs + "<br>A random friend using this app : " + a.data[rS].name;
+    ft.innerHTML = "Total number of friends : " + a.summary.total_count + "<br>Number of friends using this app : " + fS + "<br>A random friend using this app : " + a.data[rS].name;
     return fS;
   });
 };
