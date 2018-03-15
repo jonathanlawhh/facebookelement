@@ -13,3 +13,106 @@ Im Yoon-ah,Female,27
 PSY,Male,40
 Hyuna,Female,25
 Tom Hiddleston,Male,37
+Camila Cabello,Female,21
+Britney Spears,Female,36
+Shawn Mendes,Male,19
+Charlie Puth,Male,26
+Mark Zuckerberg,Male,33
+Elon Musk,Male,46
+Scarlett Johansson,Female,33
+Chris Evans,Male,36
+Robert Downey Jr.,Male,52
+Orlando YML,Female,20
+Chloe Grace Moretz,Female,21
+Chris Evans,Male,36
+Emilia Clarke,Female,31
+Dwayne Johnson,Male,45
+Emma Watson,Female,27
+Im Yoon-ah,Female,27
+PSY,Male,40
+Hyuna,Female,25
+Tom Hiddleston,Male,37
+Camila Cabello,Female,21
+Britney Spears,Female,36
+Shawn Mendes,Male,19
+Charlie Puth,Male,26
+Mark Zuckerberg,Male,33
+Elon Musk,Male,46
+Scarlett Johansson,Female,33
+Chris Evans,Male,36
+Robert Downey Jr.,Male,52
+Orlando YML,Female,20
+Chloe Grace Moretz,Female,21
+Chris Evans,Male,36
+Emilia Clarke,Female,31
+Dwayne Johnson,Male,45
+Emma Watson,Female,27
+Im Yoon-ah,Female,27
+PSY,Male,40
+Hyuna,Female,25
+Tom Hiddleston,Male,37
+Camila Cabello,Female,21
+Britney Spears,Female,36
+Shawn Mendes,Male,19
+Charlie Puth,Male,26
+Mark Zuckerberg,Male,33
+Elon Musk,Male,46
+Scarlett Johansson,Female,33
+Chris Evans,Male,36
+Robert Downey Jr.,Male,52
+Orlando YML,Female,20
+Chloe Grace Moretz,Female,21
+Chris Evans,Male,36
+Emilia Clarke,Female,31
+Dwayne Johnson,Male,45
+Emma Watson,Female,27
+Im Yoon-ah,Female,27
+PSY,Male,40
+Hyuna,Female,25
+Tom Hiddleston,Male,37
+Camila Cabello,Female,21
+Britney Spears,Female,36
+Shawn Mendes,Male,19
+Charlie Puth,Male,26
+Camila Cabello,Female,21
+Chris Evans,Male,36
+Emilia Clarke,Female,31
+Dwayne Johnson,Male,45
+Emma Watson,Female,27
+Im Yoon-ah,Female,27
+PSY,Male,40
+Hyuna,Female,25
+Tom Hiddleston,Male,37
+Camila Cabello,Female,21
+Britney Spears,Female,36
+Shawn Mendes,Male,19
+Charlie Puth,Male,26
+Camila Cabello,Female,21
+Scarlett Johansson,Female,33
+Chris Evans,Male,36
+Robert Downey Jr.,Male,52
+Orlando YML,Female,20
+Chloe Grace Moretz,Female,21
+Chris Evans,Male,36
+Emilia Clarke,Female,31
+Dwayne Johnson,Male,45
+Emma Watson,Female,27
+Im Yoon-ah,Female,27
+PSY,Male,40
+Hyuna,Female,25
+Tom Hiddleston,Male,37
+Camila Cabello,Female,21
+Britney Spears,Female,36
+Shawn Mendes,Male,19
+Charlie Puth,Male,26
+Camila Cabello,Female,21
+Chris Evans,Male,36
+Emilia Clarke,Female,31
+Dwayne Johnson,Male,45
+Emma Watson,Female,27
+Im Yoon-ah,Female,27
+PSY,Male,40
+Hyuna,Female,25
+Tom Hiddleston,Male,37
+Camila Cabello,Female,21
+Britney Spears,Female,36

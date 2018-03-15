@@ -40,6 +40,7 @@ $max = count($fName);
 			<button id="sphere">SPHERE</button>
 			<button id="helix">HELIX</button>
 			<button id="grid">GRID</button>
+			<button id="pyramid">Pyramid</button>
 		</div>
 
 		<script>
@@ -53,7 +54,7 @@ $max = count($fName);
 			var controls;
 
 			var objects = [];
-			var targets = { table: [], sphere: [], helix: [], grid: [] };
+			var targets = { table: [], sphere: [], helix: [], grid: [], pyramid: [] };
 
 			init();
 			animate();
@@ -171,6 +172,21 @@ $max = count($fName);
 
 				}
 
+				//Pyramid
+				for (var postx = 0, posty = 0, postz = 0, loop = 0, p = 0, xVal = 800, zVal = 300, xMul = 0, i = 0; i < objects.length; i++) {
+				  var object = new THREE.Object3D;
+				  p == loop ? (postx++, posty++, postz++, loop++, p = 0) : (p++, postx++);
+				  xMul = 160 * loop;
+				  20 > i ? (object.position.x = 400 * postx - xVal - xMul, object.position.y = -posty % 6 * 400 + 800, object.position.z = postz * zVal - 2000) : 20 <= i && 40 > i ? (object.position.z = 400 * postx - xVal - xMul - 1650, object.position.y = -posty % 6 * 400 + 800, object.position.x = postz * zVal - 200, object.lookAt(vector), object.rotation.z = Math.PI, object.rotation.y = Math.PI / 2, object.rotation.x = Math.PI) : 40 <= i && 60 > i ? (object.position.x = 400 * postx - xVal - xMul, object.position.y =
+				  -posty % 6 * 400 + 800, object.position.z = -(postz * zVal) - 2000, object.rotation.y = Math.PI) : 60 <= i && 79 > i ? (object.position.z = 400 * postx - xVal - xMul - 1650, object.position.y = -posty % 6 * 400 + 800, object.position.x = -(postz * zVal) - 500, object.lookAt(vector), object.rotation.z = Math.PI, object.rotation.y = -Math.PI / 2, object.rotation.x = Math.PI) : 80 <= i && 116 > i ? (object.position.x = i % 6 * 500 - 1500, object.position.z = 500 * -(Math.floor(i / 6) % 6) - 800, object.position.y =
+				  -1500, object.rotation.x = Math.PI / 2) : (object.position.x = -500 + i % 3 * 100, object.position.z = -2000, object.position.y = 800, object.rotation.y = Math.PI / 4);
+				  if (19 == i || 39 == i || 59 == i || 79 == i) {
+				    p = loop = xMul = postz = posty = postx = 0;
+				  }
+				  p == loop && (postx = 0);
+				  targets.pyramid.push(object);
+				}
+
 				//
 
 				renderer = new THREE.CSS3DRenderer();
@@ -211,6 +227,13 @@ $max = count($fName);
 				button.addEventListener( 'click', function ( event ) {
 
 					transform( targets.grid, 2000 );
+
+				}, false );
+
+				var button = document.getElementById( 'pyramid' );
+				button.addEventListener( 'click', function ( event ) {
+
+					transform( targets.pyramid, 2000 );
 
 				}, false );
 
