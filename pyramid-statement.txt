@@ -1,50 +1,50 @@
 var postx = 0, posty = 0, postz = 0, loop = 0, p = 0, xVal = 800, zVal = 300, xMul = 0;
-	for ( var i = 0; i < objects.length; i ++ ) {
+for ( var i = 0; i < objects.length; i ++ ) {
 
-		var object = new THREE.Object3D();
-		if(p == loop){ postx++; posty++; postz++; loop++; p=0;}
-		else { p++; postx++;}
-		xMul = loop*160;
+	var object = new THREE.Object3D();
+	if(p == loop){ postx++; posty++; postz++; loop++; p=0;}
+	else { p++; postx++;}
+	xMul = loop*160;
 
-		if(i<20){ //Front face
-			object.position.x = (postx * 400 ) - xVal - xMul;
-			object.position.y = (( - posty % 6 ) * 400 ) + 800;
-			object.position.z = postz * zVal - 2000;
-		} else if (i>=20 && i<40){ //Right face
-			object.position.z = (postx * 400 ) - xVal - xMul - 1650;
-			object.position.y = (( - posty % 6 ) * 400 ) + 800;
-			object.position.x = postz * zVal - 200;
-			object.lookAt( vector );
-			object.rotation.z = Math.PI;
-			object.rotation.y = Math.PI/2;
-			object.rotation.x = Math.PI;
-		} else if (i>=40 && i<60){ //Back face
-			object.position.x = (postx * 400 ) - xVal - xMul;
-			object.position.y = (( -posty % 6 ) * 400 ) + 800;
-			object.position.z = -(postz * zVal)-2000;
-			object.rotation.y = Math.PI;
-		} else if (i>=60 && i<79){ //Left face
-			object.position.z = (postx * 400 ) - xVal - xMul - 1650;
-			object.position.y = (( - posty % 6 ) * 400 ) + 800;
-			object.position.x = -(postz * zVal)-500;
-			object.lookAt( vector );
-			object.rotation.z = Math.PI;
-			object.rotation.y = -Math.PI/2;
-			object.rotation.x = Math.PI;
-		} else if (i>=80 && i<116){ //Bottom face
-			object.position.x = ( ( i % 6 ) * 500 ) - 1500 ;
-			object.position.z = ( - ( Math.floor( i / 6 ) % 6 ) * 500 ) - 800;
-			object.position.y = -1500;
-			object.rotation.x = Math.PI/2;
-		} else {
-			object.position.x = -500 + (i%3)*100;
-			object.position.z = -2000;
-			object.position.y = 800;
-			object.rotation.y = Math.PI/4;
-		}
-		if(i==19 || i == 39  || i == 59 || i == 79){ postx=0;posty=0;postz=0; xMul = 0; loop=0;p=0;}
-		if(p == loop){ postx=0; }
-
-		targets.pyramid.push( object );
-
+	if(i<20){ //Front face
+		object.position.x = (postx * 400 ) - xVal - xMul;
+		object.position.y = (( - posty % 6 ) * 400 ) + 800;
+		object.position.z = postz * zVal - 2000;
+	} else if (i>=20 && i<40){ //Right face
+		object.position.z = (postx * 400 ) - xVal - xMul - 1650;
+		object.position.y = (( - posty % 6 ) * 400 ) + 800;
+		object.position.x = postz * zVal - 200;
+		object.lookAt( vector );
+		object.rotation.z = Math.PI;
+		object.rotation.y = Math.PI/2;
+		object.rotation.x = Math.PI;
+	} else if (i>=40 && i<60){ //Back face
+		object.position.x = (postx * 400 ) - xVal - xMul;
+		object.position.y = (( -posty % 6 ) * 400 ) + 800;
+		object.position.z = -(postz * zVal)-2000;
+		object.rotation.y = Math.PI;
+	} else if (i>=60 && i<80){ //Left face
+		object.position.z = (postx * 400 ) - xVal - xMul - 1650;
+		object.position.y = (( - posty % 6 ) * 400 ) + 800;
+		object.position.x = -(postz * zVal)-500;
+		object.lookAt( vector );
+		object.rotation.z = Math.PI;
+		object.rotation.y = -Math.PI/2;
+		object.rotation.x = Math.PI;
+	} else if (i>=80 && i<116){ //Bottom face
+		object.position.x = ( ( i % 6 ) * 500 ) - 1500 ;
+		object.position.z = ( - ( Math.floor( i / 6 ) % 6 ) * 500 ) - 800;
+		object.position.y = -1500;
+		object.rotation.x = Math.PI/2;
+	} else {
+		object.position.x = -500 + (i%3)*100;
+		object.position.z = -2000;
+		object.position.y = 800;
+		object.rotation.y = Math.PI/4;
 	}
+	if(i==19 || i == 39  || i == 59 || i == 79){ postx=0;posty=0;postz=0; xMul = 0; loop=0;p=0;}
+	if(p == loop){ postx=0; }
+
+	targets.pyramid.push( object );
+
+}
