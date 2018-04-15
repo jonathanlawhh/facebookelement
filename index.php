@@ -103,6 +103,8 @@ function deleteAuth() {
   var a = "https://graph.facebook.com/me/permissions?method=delete&access_token=" + document.getElementById("authIDin").value;
   window.open(a, "_blank");
 }
-
-M.AutoInit();
+function initialize() {
+	M.AutoInit();
+}
+window.addEventListener ? window.addEventListener("load", initialize, !1) : window.attachEvent ? window.attachEvent("onload", initialize) : window.onload = initialize;
 </script>
